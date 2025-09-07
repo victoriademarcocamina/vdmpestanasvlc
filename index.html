@@ -28,14 +28,14 @@
 
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(33, 33, 33, 0.95);
             backdrop-filter: blur(10px);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         nav {
@@ -45,12 +45,15 @@
         }
 
         .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #e91e63, #f06292);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -61,13 +64,13 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #e91e63;
+            color: #f06292;
         }
 
         /* Hero Section */
@@ -98,19 +101,22 @@
             max-width: 800px;
             margin: 0 auto;
             animation: fadeInUp 1s ease-out;
+			color:black;
         }
 
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			color:black;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
-        }
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+color:black;        }
 
         .cta-buttons {
             display: flex;
@@ -201,6 +207,32 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        .service-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(233, 30, 99, 0.2);
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .service-details span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-details i {
+            color: #e91e63;
+        }
+
+        .price {
+            font-weight: 600;
+            color: #e91e63;
         }
 
         /* Contact Section */
@@ -406,7 +438,9 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">VDM Pestañas</div>
+            <div class="logo">
+                <img src="logovick.jpg" alt="VDM Pestañas Logo">
+            </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -423,11 +457,11 @@
                 <h1>Lifting de Pestañas y Cejas</h1>
                 <p>Especialistas en lifting profesional. Realza tu mirada con nuestros tratamientos de última generación para pestañas y cejas perfectas.</p>
                 <div class="cta-buttons">
-                    <a href="#cita" class="btn btn-primary">
-                        <i class="far fa-calendar-alt"></i>
+                    <a href="#cita" class="btn btn-primary"style="color:black;"	>
+                        <i class="far fa-calendar-alt" ></i>
                         Reservar Cita
                     </a>
-                    <a href="#" class="btn btn-whatsapp" id="whatsappHero">
+                    <a href="#" class="btn btn-whatsapp" style="color:black;" id="whatsappHero">
                         <i class="fab fa-whatsapp"></i>
                         WhatsApp
                     </a>
@@ -445,22 +479,67 @@
                     <div class="service-icon">
                         <i class="fas fa-eye"></i>
                     </div>
+                    <h3>Extensiones de Pestañas Clásicas</h3>
+                    <p>Técnica clásica para un look natural y elegante. Una extensión por pestaña natural.</p>
+                    <div class="service-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 120 min</span>
+                        <span class="price"><i class="fas fa-euro-sign"></i> 45,00 €</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3>Extensiones Volumen Ruso 2-3D</h3>
+                    <p>Técnica de volumen para una mirada más intensa con 2-3 extensiones por pestaña.</p>
+                    <div class="service-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 150 min</span>
+                        <span class="price"><i class="fas fa-euro-sign"></i> 50,00 €</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Extensiones Megavolumen</h3>
+                    <p>Máximo volumen y densidad para una mirada espectacular y dramática.</p>
+                    <div class="service-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 150 min</span>
+                        <span class="price"><i class="fas fa-euro-sign"></i> 60,00 €</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-redo-alt"></i>
+                    </div>
+                    <h3>Relleno Máximo 3 Semanas</h3>
+                    <p>Mantenimiento perfecto de tus extensiones para que siempre luzcan impecables.</p>
+                    <div class="service-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 75 min</span>
+                        <span class="price"><i class="fas fa-euro-sign"></i> 30,00 €</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
                     <h3>Lifting de Pestañas</h3>
-                    <p>Tratamiento profesional que curva y alarga tus pestañas de forma natural, sin necesidad de extensiones.</p>
+                    <p>Alza y curva natural de tus pestañas sin necesidad de extensiones.</p>
+                    <div class="service-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 60 min</span>
+                        <span class="price"><i class="fas fa-euro-sign"></i> 30,00 €</span>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-seedling"></i>
+                        <i class="fas fa-leaf"></i>
                     </div>
-                    <h3>Lifting de Cejas</h3>
-                    <p>Técnica que redefine y levanta las cejas para un aspecto más juvenil y expresivo.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-spa"></i>
+                    <h3>Laminado de Cejas</h3>
+                    <p>Reestructura y fija las cejas para un aspecto más definido y arreglado.</p>
+                    <div class="service-details">
+                        <span class="duration"><i class="fas fa-clock"></i> 45 min</span>
+                        <span class="price"><i class="fas fa-euro-sign"></i> 25,00 €</span>
                     </div>
-                    <h3>Tratamientos Combinados</h3>
-                    <p>Servicios completos de lifting para pestañas y cejas que transforman tu mirada completamente.</p>
                 </div>
             </div>
         </div>
@@ -497,17 +576,37 @@
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <strong>Horarios</strong>
-                            <p>Lun - Vie: 9:00 - 19:00<br>Sáb: 9:00 - 17:00</p>
+                            <strong>Horarios de apertura</strong>
+							<table>
+							<tr>
+								<td>Lunes</td><td>09:00 - 11:00<br>
+											16:00 - 20:00</td>
+							</tr>
+							<tr>
+								<td>
+								Martes</td><td>10:00 - 14:00</td>
+							</tr>
+							<tr>
+							 <td>Miércoles</td><td>09:00 - 11:00<br>
+16:00 - 20:00</td>
+</tr>
+<tr>
+<td>Jueves</td><td>10:00 - 14:00</td>
+</tr>
+<tr>
+<td>Viernes</td><td>09:00 - 11:00<br>
+16:00 - 20:00</td>
+</tr>
+<tr>
+</table>
+</p>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link" id="instagramLink" title="Síguenos en Instagram">
+                        <a href="https://www.instagram.com/vdmpestanas_vlc/" class="social-link" id="instagramLink" title="Síguenos en Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link" id="facebookLink" title="Síguenos en Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+
                         <a href="#" class="social-link" id="whatsappContact" title="Contáctanos por WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
@@ -529,6 +628,12 @@
             </div>
         </div>
     </section>
+	 <section class="contact" id="trabajos">
+        <div class="container">
+		<script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+<div class="commonninja_component pid-6afc681a-91f3-4c17-9603-f858423a7d68"></div>
+		</div>
+	</section>
 
     <script>
         // Configuration
@@ -579,7 +684,7 @@
         // WhatsApp booking alternative
         document.getElementById('whatsappBooking').addEventListener('click', function(e) {
             e.preventDefault();
-            openWhatsApp('¡Hola! Me gustaría reservar una cita para lifting de pestañas o cejas. ¿Podrían ayudarme con la disponibilidad?');
+            openWhatsApp('¡Hola! Me gustaría reservar una cita. ¿Podrían ayudarme con la disponibilidad para extensiones de pestañas o laminado de cejas?');
         });
 
         // Instagram link
@@ -598,9 +703,9 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.background = 'rgba(33, 33, 33, 0.98)';
             } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.background = 'rgba(33, 33, 33, 0.95)';
             }
         });
 
